@@ -1,0 +1,162 @@
+var MyLogin = function() {
+
+	function initButtonEvent() {
+		document.onkeydown = keyDownLogin;
+		$("#loginButtonId").click(function() {
+			login();
+		});
+	}
+	// 登录处理
+	function login() {
+		// 1.登录表单处理
+		var username= $('[name=i_user]').val();
+		var password= $('[name=i_pass]').val();
+		if (username==null||username=="") {
+			Modal({ type: "regest", css:"one", content:wlxtlang_yonghumingweikong })//"用户名不能为空"
+		 /* zeroModal.error({
+	            content: "用户名不能为空",
+	            width: '300px',
+	        	height: '200px',
+	        });*/
+			 return;
+		}
+		if (password==null||password=="") {
+			Modal({ type: "regest", css:"one", content:"密码不能为空" })//"密码不能为空"
+			  /*zeroModal.error({
+		            content: "密码不能为空",
+		            width: '300px',
+		        	height: '200px',
+		        });*/
+				 return;
+			
+		}
+		username = escape($('[name=i_user]').val());
+        var reg = /^P\d{7,8}$/gi;
+        var flag = reg.test(username);
+
+		if($("#loginForm").attr("action") != null && $("#loginForm").attr("action").length > 0&&!flag){
+			$.post(baseUrl + "/f/loginAccountSave", "loginAccount=" + escape($('[name=i_user]').val()), function(data) {
+				if(data.result == 'success'){
+					$("#loginForm").submit();
+				}
+			});
+			
+		}else{
+            var userLoginUrl = "";
+			if(flag){
+				if(ptshttps=="true"){
+                    userLoginUrl = ptshttpsurl + "/b/j_spring_security_oauth_roaming_entry_pang";
+                    pangtingshengLogin(userLoginUrl);
+                    return false;//调用旁听生单独的登录方法
+				}else {
+                    userLoginUrl = baseUrl + "/b/j_spring_security_oauth_roaming_entry_pang";
+                }
+			}else{
+                userLoginUrl =  baseUrl + "/b/ajaxLogin";
+			}
+
+
+			var param = "j_username=" + escape($('[name=i_user]').val())
+			+ "&j_password=" + $('[name=i_pass]').val(); 
+			
+			
+			$.post(userLoginUrl, param, function(data) {
+				if (data.result == "success") {
+					
+					if(data.url == null || data.url == 'undefined'){
+						window.location.href = baseUrl + '/f/wlxt/index/course/teacher/';
+					}else{
+						window.location.href = baseUrl + data.url;
+					}
+					
+				} else {
+			        /*
+					 * zeroModal.error({ content: data, width: '300px', height:
+					 * '200px', });
+					 */
+					Modal({ type: "regest", css:"one", content:data })
+				}
+			});
+		}
+		
+		
+
+		
+
+	}
+
+	function pangtingshengLogin(userLoginUrl) {
+		//https请求登录时调用以下方式
+        $.ajax({
+            type:"POST",
+            url:userLoginUrl,
+            data:{
+                j_username:escape($('[name=i_user]').val()),
+                j_password:$('[name=i_pass]').val()
+            },
+            dataType:"json",
+            xhrFields:{withCredentials: true},
+            success:function(data) {
+                if (data.result == "success") {
+                    window.location.href = baseUrl + data.url;
+                } else {
+                    Modal({ type: "regest", css:"one", content:data })
+                }
+            }});
+    }
+
+	function keyDownLogin(e) {
+		if (navigator.appName == "Microsoft Internet Explorer") {
+			var keycode = event.keyCode;
+			var realkey = String.fromCharCode(event.keyCode);
+
+		} else {
+			var keycode = e.which;
+			var realkey = String.fromCharCode(e.which);
+
+		}
+		if (keycode == 13) {
+			$("#loginButtonId").click();//  
+		}
+
+	}
+	;
+	// 检查适配浏览器，如果不支持，隐藏登陆域，显示浏览器下载域
+	function checkBrowser(){
+		/*
+		 * var
+		 * isIE678=$.browser.msie&&($.browser.version=="6.0"||$.browser.version=="7.0"||$.browser.version=="8.0");
+		 * if(isIE678){ $("#loginDivId").remove(); $("#browserError").show(); }
+		 */
+		
+	    var userAgent = navigator.userAgent; // 取得浏览器的userAgent字符串
+	    var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; // 判断是否IE<11浏览器
+	    var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; // 判断是否IE的Edge浏览器
+	    var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+	    if (isIE) {
+	        var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+	        reIE.test(userAgent);
+	        var fIEVersion = parseFloat(RegExp["$1"]);
+	        
+	        if (fIEVersion==6||fIEVersion==7||fIEVersion==8) {
+				$("#loginDivId").remove();
+	        } 
+	    } 
+		
+		
+		
+		
+		
+	}
+	
+	return {
+		init : function() {
+			checkBrowser();
+			initButtonEvent();
+		}
+	}
+}();
+
+$(document).ready(function() {
+	MyLogin.init();
+});
