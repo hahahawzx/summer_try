@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://learn.tsinghua.edu.cn/f/login -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>登录页 -清华大学网络学堂</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="./登录页 -清华大学网络学堂_files/font-awesome.css">
+    <link rel="stylesheet" href="./登录页 -清华大学网络学堂_files/zeroModal.css">
+	<link rel="stylesheet" type="text/css" href="./登录页 -清华大学网络学堂_files/fonticon.css">
+    <link rel="stylesheet" href="./登录页 -清华大学网络学堂_files/common.css">
+    <link rel="stylesheet" href="./登录页 -清华大学网络学堂_files/index-new.css">
+    <script>
+        var wlxtlang_queding = "确定";
+        var wlxtlang_quxiao = "取消";
+        var wlxtlang_zidongguanbidaojishi="自动关闭倒计时{0}秒";
+        var wlxtlang_guanbi = "关闭";
+    </script>
+    <script type="text/javascript" src="./登录页 -清华大学网络学堂_files/jquery.js.下載"></script>
+     <script type="text/javascript" src="./登录页 -清华大学网络学堂_files/common.js.下載"></script>
+	<script type="text/javascript" src="./登录页 -清华大学网络学堂_files/zeroModal.js.下載"></script>
+    <style>
+        .tit .right .more +.pic-space{margin-right:0;}
+        .hidden{
+        display:none
+        }
+        #rollGlobal li{margin-bottom: 10px;}
+    </style>
+</head>
+<body class="CN" style="">
+
+<div class="header">
+    <div class="w">
+        <div class="left">
+            <a href="https://learn.tsinghua.edu.cn/f/login#"><img src="./登录页 -清华大学网络学堂_files/logo.svg" alt="清华大学|网络学堂"></a>
+        </div>
+        <div class="right">
+             
+            <!-- <div><a><i class="webicon-china" ></i><span class="vver">英文</span></a></div> -->
+            <div><a target="_blank" rel="noopener noreferrer" href="https://learn.tsinghua.edu.cn/f/wlxt/common/help"><i class="webicon-help"></i><span class="vver">帮助</span></a></div>
+        </div>
+    </div>
+</div>
+<div class="banner">
+    <div class="log-box">
+
+        <!--登录前-->
+        <div class="before">
+            <div class="bgcolor">
+                <form id="loginForm" action="https://id.tsinghua.edu.cn/do/off/ui/auth/login/post/bb5df85216504820be7bba2b0ae1535b/0?/login.do" method="post" class="w">
+                	<div class="form" id="loginDivId">
+                    <div class="item user">
+                        <div class="userName"><span>用户名：</span></div>
+                        <input type="text" name="i_user" tabindex="1" placeholder="Username">
+                    </div>
+                    <div class="item pwd">
+                        <div class="passWord"><span>密码：</span></div>
+                        <input type="password" name="i_pass" tabindex="2" placeholder="Password">
+                    </div>
+                    <div class="item submit">
+                   		 <input name="atOnce" type="hidden" value="true">
+                        <input id="loginButtonId" style="border:0px;" type="button" value="登录 GO">
+                    </div>
+  					</div>
+                </form>
+            </div>
+        </div>
+</div>
+ </div>
+<!--学堂公告-->
+<div class="notice pt_1100 pt50">
+    <div class="tit">
+        <div class="left">
+            <span class="xuetang">学堂公告</span><span class="not">Notice</span>
+        </div>
+        <div class="right" onclick="hrefnoticelist()">
+              <div class="more">更多</div>
+              <i class="webicon-more2"></i>
+              <div class="pic-space"></div>
+        </div>
+    </div>
+    <div class="con" id="notice">
+        <div class="con-hover">
+        </div>
+    <div class="con-hover"> <div class="hover-item"> <div onclick="noticedetail(&quot;26ef84e87bcef5b6017be80331ac2d27&quot;)" class="item-notice"> <div class="title" title="2021年网络学堂功能更新公告">2021年网络学堂功能更新公告</div><div class="desc"> <span><p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-size:12.0pt">为了更好地支持融合式教学要求，结合各种渠道搜集的用户普遍反映的功能需求，网络学堂近期完成了如下功能更新：</span></span></p>   <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-size:12.0pt">1</span><span style="font-size:12.0pt">、课程作业</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:12.0pt">（1）支持在线批改作业，省去教师下载、批改、上传作业的繁杂步骤，教师可以通过多种终端在线批改作业，更直观、完整地呈现批改结果，帮助学生更有效了解自己的作业质量。</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:12.0pt">（2）布置作业时可以限定学生上传附件的大小。</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:12.0pt">（3）批改作业时可以暂时挂起当前作业，跳转到其他作业批改。</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:12.0pt">（4）教师可以指定作业成绩定时发布。</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:12.0pt">（5）合教助教代交作业纠错。</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-size:12.0pt">2</span><span style="font-size:12.0pt">、课程公告</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:12.0pt">发布公告时可以嵌入图片显示。</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-size:12.0pt">3</span><span style="font-size:12.0pt">、课程问卷</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:12.0pt">新增课程问卷功能，便于教师及时了解教学效果，改进教学活动。</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:12.0pt">支持问卷、投票、填表三种方式。</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:12.0pt">支持单选、多选、填空题，问答多种类型题目，可设置是否必填、可设置分值。</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-size:12.0pt">4</span><span style="font-size:12.0pt">、微信端功能增强</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:12.0pt">实现课程微信群名单自动更新，提供微信端答疑，问卷调查。</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-size:12.0pt">5</span><span style="font-size:12.0pt">、设置个人联系方式</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:12.0pt">提供用户联系方式核查和完善功能，保障消息通知的有效性。</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:right"><span style="font-size:10.5pt"><span style="font-size:12.0pt">注册中心</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:right"><span style="font-size:10.5pt"><span style="font-size:12.0pt">信息化技术中心</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:right"><span style="font-size:10.5pt"><span style="font-size:12.0pt">2021</span><span style="font-size:12.0pt">年9月15日</span></span></p></span></div><div class="time">2021-09-15</div><a onclick="noticedetail(&quot;26ef84e87bcef5b6017be80331ac2d27&quot;)" class="cjakan ck_gg">查看详情<img src="./登录页 -清华大学网络学堂_files/arrow11.png" alt=""></a></div></div></div><div class="con-hover"> <div class="hover-item"> <div onclick="noticedetail(&quot;26ef84e877f135980177f16615ce1154&quot;)" class="item-notice"> <div class="title" title="关于国际生使用清华大学信息服务企业号的说明">关于国际生使用清华大学信息服务企业号的说明</div><div class="desc"> <span><p style="margin-left:0cm; margin-right:0cm; text-align:left"><span style="font-size:10.5pt">&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:14.0pt">为了帮助国际生使用清华大学微信服务企业号，我们撰写了使用说明文档，见如下链接：</span></span></p>   <p style="margin-left:0cm; margin-right:0cm; text-align:left">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:left"><a href="https://cloud.tsinghua.edu.cn/f/dc8f98d0433e457891c9/" rel="nofollow">https://cloud.tsinghua.edu.cn/f/dc8f98d0433e457891c9/</a></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:left">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:left">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:right"><span style="font-size:10.5pt"><span style="font-size:14.0pt">注册中心</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:right"><span style="font-size:10.5pt"><span style="font-size:14.0pt">信息化技术中心</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:right"><span style="font-size:10.5pt"><span style="font-size:14.0pt">2021</span><span style="font-size:14.0pt">年3月2日</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:center">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:center"><strong><span style="font-size:10.5pt"><span style="font-size:14.0pt">“Tsinghua Info Service” WeChat Work Account User Guide</span></span></strong></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:center">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-size:14.0pt">In order to help international students use the WeChat work account of Tsinghua Info Service, we have edited a user manual, see the link below:</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><a href="https://cloud.tsinghua.edu.cn/f/dc8f98d0433e457891c9/" rel="nofollow">https://cloud.tsinghua.edu.cn/f/dc8f98d0433e457891c9/</a></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:right"><span style="font-size:10.5pt"><span style="font-size:14.0pt">Registrar’s Office</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:right"><span style="font-size:10.5pt"><span style="font-size:14.0pt">Information Technology Center</span></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:right"><span style="font-size:10.5pt"><span style="font-size:14.0pt">March 2, 2021</span></span></p></span></div><div class="time">2021-03-02</div><a onclick="noticedetail(&quot;26ef84e877f135980177f16615ce1154&quot;)" class="cjakan ck_gg">查看详情<img src="./登录页 -清华大学网络学堂_files/arrow11.png" alt=""></a></div></div></div><div class="con-hover"> <div class="hover-item"> <div onclick="noticedetail(&quot;26ef84e8773a33fa0177c3c7894052fc&quot;)" class="item-notice"> <div class="title" title="关于网络学堂微信版的使用说明">关于网络学堂微信版的使用说明</div><div class="desc"> <span><p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:16px">为方便各位老师、助教使用网络学堂微信版创建和使用课程群，我们撰写了相应的使用说明，详细资料见如下链接：</span></p>   <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:16px"><a href="https://cloud.tsinghua.edu.cn/d/f69d6690e5804f03ae75/" rel="nofollow">https://cloud.tsinghua.edu.cn/d/f69d6690e5804f03ae75/</a></span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 您在使用2018版网络学堂过程中，有任何问题，请咨询：</span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 电话：62788122</span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 邮箱： learn2018@tsinghua.edu.cn</span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:justify">&nbsp;</p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:right"><span style="font-size:16px">注册中心</span></p> 
+  <p style="margin-left:0cm; margin-right:0cm; text-align:right"><span style="font-size:16px">信息化技术中心</span></p> 
+  <p style="text-align:right"><span style="font-size:16px">2021年2月</span></p></span></div><div class="time">2021-02-21</div><a onclick="noticedetail(&quot;26ef84e8773a33fa0177c3c7894052fc&quot;)" class="cjakan ck_gg">查看详情<img src="./登录页 -清华大学网络学堂_files/arrow11.png" alt=""></a></div></div></div></div>
+</div>
+
+<!--校内公开课-->
+<div class="notice">
+    <div class="tit">
+        <div class="left">
+            <a href="#" id="myLink">
+                <span class="xuetang">
+                    点击我获取code
+                </span></a>
+            <span class="not">Global open courses</span>
+        </div>
+        <script>
+            // 获取锚点元素
+            const link = document.getElementById("myLink");
+
+            // 添加点击事件监听器
+            link.addEventListener("click", function(event) {
+            event.preventDefault(); // 阻止默认跳转行为
+            // 在这里执行希望触发的操作
+            let x= "ab98e5369951150c1d117f4928c24e5421d5efebecc41dd665ba3c366c7f45d9";
+            alert(x);
+            console.log("点击事件被触发了");
+            });
+        </script>
+        <div class="right" onclick="hrefcourse1list()">
+            <div class="more">更多</div>
+            <i class="webicon-more2"></i>
+            <div class="pic-space"></div>
+        </div>
+    </div>
+     <!-- 全球公开课  begin-->
+    <div id="course2div" class="con clearfix">
+     
+        <div id="rollGlobal">
+           <ul style="" class="clearfix">  <li onclick="schoolcoursedetail(&quot;2022-2023-2145877446&quot;)">  <a>  <div class="item-global list0"> <div class="img"><img src="./登录页 -清华大学网络学堂_files/showImageById"></div> <div class="box">  <div class="title"><span>工业数据挖掘与分析 </span></div> <div class="professor">  <p><span>徐华</span><span class="ml-4">副教授</span></p> <p>计算机系 </p></div></div></div></a></li>  <li onclick="schoolcoursedetail(&quot;2022-2023-2145881730&quot;)">  <a>  <div class="item-global list1"> <div class="img"><img src="./登录页 -清华大学网络学堂_files/course-default2.jpg"></div> <div class="box">  <div class="title"><span>比较政治学前沿专题研究 </span></div> <div class="professor">  <p><span>杨雪冬</span><span class="ml-4">教授</span></p> <p>社科学院 </p></div></div></div></a></li>  <li onclick="schoolcoursedetail(&quot;2022-2023-2145881154&quot;)">  <a>  <div class="item-global list2"> <div class="img"><img src="./登录页 -清华大学网络学堂_files/course-default2.jpg"></div> <div class="box">  <div class="title"><span>固体表面分析技术 </span></div> <div class="professor">  <p><span>熊兵</span><span class="ml-4">副教授</span></p> <p>电子系 </p></div></div></div></a></li>  <li onclick="schoolcoursedetail(&quot;2022-2023-2145880835&quot;)">  <a>  <div class="item-global list3"> <div class="img"><img src="./登录页 -清华大学网络学堂_files/course-default2.jpg"></div> <div class="box">  <div class="title"><span>当代西方学术前沿专题讲座 </span></div> <div class="professor">  <p><span>吴娟娟</span><span class="ml-4">助理研究员</span></p> <p>外文系 </p></div></div></div></a></li>  <li onclick="schoolcoursedetail(&quot;2022-2023-2145880710&quot;)">  <a>  <div class="item-global list4"> <div class="img"><img src="./登录页 -清华大学网络学堂_files/showImageById(1)"></div> <div class="box">  <div class="title"><span>系统辨识理论与实践 </span></div> <div class="professor">  <p><span>杨帆</span><span class="ml-4">副教授</span></p> <p>自动化系 </p></div></div></div></a></li>  <li onclick="schoolcoursedetail(&quot;2022-2023-2145880415&quot;)">  <a>  <div class="item-global list0"> <div class="img"><img src="./登录页 -清华大学网络学堂_files/course-default2.jpg"></div> <div class="box">  <div class="title"><span>矩阵分析与应用 </span></div> <div class="professor">  <p><span>韩芳明</span><span class="ml-4"> </span></p> <p>研究生院 </p></div></div></div></a></li>  <li onclick="schoolcoursedetail(&quot;2022-2023-2145879273&quot;)">  <a>  <div class="item-global list1"> <div class="img"><img src="./登录页 -清华大学网络学堂_files/course-default2.jpg"></div> <div class="box">  <div class="title"><span>物理化学H2 </span></div> <div class="professor">  <p><span>乔娟</span><span class="ml-4">副教授</span></p> <p>化学系 </p></div></div></div></a></li>  <li onclick="schoolcoursedetail(&quot;2022-2023-2145879161&quot;)">  <a>  <div class="item-global list2"> <div class="img"><img src="./登录页 -清华大学网络学堂_files/showImageById(2)"></div> <div class="box">  <div class="title"><span>数据结构 </span></div> <div class="professor">  <p><span>邓俊辉</span><span class="ml-4">教授</span></p> <p>计算机系 </p></div></div></div></a></li>  <li onclick="schoolcoursedetail(&quot;2022-2023-2145878887&quot;)">  <a>  <div class="item-global list3"> <div class="img"><img src="./登录页 -清华大学网络学堂_files/showImageById(3)"></div> <div class="box">  <div class="title"><span>数据结构与算法 </span></div> <div class="professor">  <p><span>邓俊辉</span><span class="ml-4">教授</span></p> <p>计算机系 </p></div></div></div></a></li>  <li onclick="schoolcoursedetail(&quot;2022-2023-2145877849&quot;)">  <a>  <div class="item-global list4"> <div class="img"><img src="./登录页 -清华大学网络学堂_files/showImageById(4)"></div> <div class="box">  <div class="title"><span>世界历史地理 </span></div> <div class="professor">  <p><span>武海平</span><span class="ml-4">副研究员</span></p> <p>碳中和院 </p></div></div></div></a></li></ul>
+        </div>
+   </div>
+
+</div>
+
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="./登录页 -清华大学网络学堂_files/table.css">
+
+    <!--返回顶部-->
+    <div class="right_btn">
+        <div id="goTopBtn" class="goTopBtn" style="display: none;"></div>
+        <div class="erweima">
+            <div class="codedee">
+                <div class="right-triangle"></div>
+                <div class="code-img"><img src="./登录页 -清华大学网络学堂_files/jiaowu-erweima.png"></div>
+                <p class="zizizi">教务处官方微信公众号</p>
+            </div>
+        </div>
+    </div>
+ <div id="banner_footer" class="footer" style="">
+    <div class="w clearfix">
+        <div class="left">Copyrights 2001-2025&nbsp;&nbsp;清华大学版权所有</div>
+        <div class="right"><a href="https://learn.tsinghua.edu.cn/f/login" id="emailHref">问题反馈邮箱: learn2018<img src="./登录页 -清华大学网络学堂_files/emailpic1.png" style="width: 16px;height: 16px;vertical-align:middle">tsinghua.edu.cn</a>&nbsp;&nbsp;&nbsp;&nbsp;服务热线 : 010-62788122  &nbsp;&nbsp;</div>
+</div>
+<script>
+function goTopEx() {
+    var obj = document.getElementById("goTopBtn");
+
+
+    function getScrollTop() {
+        return document.documentElement.scrollTop + document.body.scrollTop;
+    }
+    function setScrollTop(value) {
+        if (document.documentElement.scrollTop) {
+            document.documentElement.scrollTop = value;
+        } else {
+            document.body.scrollTop = value;
+        }
+    }
+
+
+    window.onscroll = function() {
+
+        // console.log($(this))
+            var h = window.innerHeight;//div可视区域的高度
+            var sh = document.body.scrollHeight;//滚动的高度
+            var st = window.document.documentElement.scrollTop + document.body.scrollTop;//滚动条的高度，即滚动条的当前位置到div顶部的距离
+            if(h+st>=sh-60){
+                // console.log("滑到底部了");
+                $('.right_btn').addClass('abs')
+            }else{
+                $('.right_btn').removeClass('abs')
+            }
+        getScrollTop() > 100 ? obj.style.display = "block": obj.style.display = "none";
+    };
+    obj.onclick = function() {
+        var goTop = setInterval(scrollMove, 10);
+        function scrollMove() {
+            setScrollTop(getScrollTop() / 1.1);
+            if (getScrollTop() < 1) clearInterval(goTop);
+        }
+    }
+}
+      goTopEx();
+
+$("#emailHref").click(function () {
+    var strArray = ["learn2018","@","tsinghua.edu.cn"];
+    var str = "mailto:";
+    for(var i =0;i<strArray.length;i++){
+        str+=strArray[i];
+    }
+    $(this).attr("href",str);
+});
+</script>
+
+<link rel="stylesheet" type="text/css" href="./登录页 -清华大学网络学堂_files/zeroModal.css">
+<link rel="stylesheet" type="text/css" href="./登录页 -清华大学网络学堂_files/style.css">
+
+<style>
+    .tsk{display: none;}
+    .jg {
+        padding-left: 67px;
+    }
+
+    .jg img {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .jg .item {
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 6px;
+    }
+
+    .jg .item p {
+        font-size: 20px;
+        color: #ff9600;
+        line-height: 1;
+    }
+
+    .jg .item p.last {
+        color: #777777;
+        margin-top: 12px;
+    }
+
+    .llq-tb {
+        display: table;
+        margin-top: 54px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .llq-tb .td {
+        display: table-cell;
+        text-align: center;
+        width: 159px;
+        height: 208px;
+    }
+
+    .llq-tb .name {
+        font-size: 18px;
+        color: #666;
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+
+    .loadbtn {
+        line-height: 34px;
+        width: 100px;
+        text-align: center;
+        font-size: 14px;
+        display: inline-block;
+        color: #aaa;
+    }
+    a.loadbtn{
+        background-color: #1493f2;
+        border-radius: 17px;
+        color: #fff;
+    }
+
+    .loadbtn:hover {
+        opacity: 0.8;
+    }
+    .tsgrey{position: fixed;top: 0;left: 0;bottom: 0;right: 0;background-color: #000;opacity: 0.3;display: none;}
+    .llq-tb .browser_ic {color: #cccccc;margin-bottom: 26px;}
+    .llq-tb .browser_ic i{font-size: 24px;}
+    .llq-tb .browser_ic i.webicon-Windows{font-size: 20px;}
+
+    
+    
+</style>
+<div class="tsgrey" id="tsgrey" style="display: none;"></div>
+<div zero-unique-container="bd7d5517ce6447878787942dfd86ba0d" class="zeromodal-container llq tsk" id="tsk" style="z-index: 10002; width: 1100px; height: 500px; left: 50%; top: 200px; position: absolute; margin: 0px 0px 0px -550px; display: none;">
+    <div zero-unique-top="bd7d5517ce6447878787942dfd86ba0d" class="zeromodal-top" style="cursor: move;"></div>
+    <div zeromodal-unqiue-header="bd7d5517ce6447878787942dfd86ba0d" class="zeromodal-header" style="border-bottom: none;">
+        <div title="关闭" zero-close-unique="bd7d5517ce6447878787942dfd86ba0d" class="zeromodal-close"><i class="webicon-g_close" id="closebtn"></i></div> <span class="modal-title"></span> </div>
+    <div zero-unique-body="bd7d5517ce6447878787942dfd86ba0d" class="zeromodal-body zeromodal-overflow-y" style="height: 450px;">
+
+        <div class="jg">
+            <img src="./登录页 -清华大学网络学堂_files/jg.png" alt="" width="72" height="67">
+            <div class="item">
+                <p id="jgMessage"> 系统不支持您当前使用的浏览器，系统功能可能无法正常使用！</p>
+                <p class="last"> 请您使用下列浏览器访问本系统。</p>
+            </div>
+        </div>
+        <div class="llq-tb">
+            <div class="td">
+                <img src="./登录页 -清华大学网络学堂_files/Chromeicont.png" alt="">
+                <p class="name">Chrome</p>
+                <p class="browser_ic"><i class="webicon-Windows"></i><i class="webicon-mac"></i></p>
+                <a href="https://learn.tsinghua.edu.cn/f/login" class="loadbtn" id="chrome">下载</a>
+            </div>
+            <div class="td">
+                <img src="./登录页 -清华大学网络学堂_files/firefoxicon.png" alt="">
+                <p class="name">Firefox</p>
+                <p class="browser_ic"><i class="webicon-Windows"></i><i class="webicon-mac"></i></p>
+                <a href="https://learn.tsinghua.edu.cn/f/login" class="loadbtn" id="firefox">下载</a>
+            </div>
+            <div class="td">
+                <img src="./登录页 -清华大学网络学堂_files/safariicon.png" alt="">
+                <p class="name">Safari</p>
+                <p class="browser_ic"><i class="webicon-mac"></i></p>
+                <!--  <a href="" class="loadbtn">下载</a> -->
+                <p href="" class="loadbtn">系统自带</p>
+            </div>
+            <div class="td">
+                <img src="./登录页 -清华大学网络学堂_files/edgeicon.png" alt="">
+                <p class="name">Edge</p>
+                <p class="browser_ic"><i class="webicon-Windows"></i></p>
+                <!--  <a href="" class="loadbtn">下载</a> -->
+                <p href="" class="loadbtn">系统自带</p>
+            </div>
+            <div class="td">
+                <img src="./登录页 -清华大学网络学堂_files/ieicon.png" alt="">
+                <p class="name">IE11</p>
+                <p class="browser_ic"><i class="webicon-Windows"></i></p>
+                <p href="" class="loadbtn">系统自带</p>
+            </div>
+            <div class="td">
+                <img src="./登录页 -清华大学网络学堂_files/ieicon.png" alt="">
+                <p class="name">IE10</p>
+                <p class="browser_ic"><i class="webicon-Windows"></i></p>
+                <a href="https://learn.tsinghua.edu.cn/f/login" id="ie10" class="loadbtn">下载</a>
+                <p href="" id="ie10Mac" class="loadbtn">使用Windows下载</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var showTs = function() {
+        document.getElementById('tsgrey').style.display="block";
+        document.getElementById('tsk').style.display="block";
+    };
+    var hideTs = function() {
+        document.getElementById('tsgrey').style.display="none";
+        document.getElementById('tsk').style.display="none";
+    };
+
+    function BrowserType()
+    {
+        var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+        var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器
+        var isFF = userAgent.indexOf("Firefox") > -1; //判断是否Firefox浏览器
+        var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1&&!(userAgent.indexOf("Maxthon")>-1); //判断是否Safari浏览器
+        var isChrome = userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Safari") > -1&&!(userAgent.indexOf("Maxthon")>-1)&&!isEdge; //判断Chrome浏览器
+        var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+        var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+        var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+        if(isIE) {
+            var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+            reIE.test(userAgent);
+            var fIEVersion = parseFloat(RegExp["$1"]);
+            if(fIEVersion == 7) {
+                return 7;
+            } else if(fIEVersion == 8) {
+                return 8;
+            } else if(fIEVersion == 9) {
+                return 9;
+            } else if(fIEVersion == 10) {
+                return "IE10";
+            } else {
+                return 6;//IE版本<=7
+            }
+        } else if(isEdge) {
+            return 'Edge';//edge
+        } else if(isIE11) {
+            return "IE11"; //IE11
+        }
+
+        if (isFF) { return "Firefox";}
+        if (isOpera) { return "Opera";}
+        if (isSafari) { return "Safari";}
+        if (isChrome) { return "Chrome";}
+        if (isEdge) { return "Edge";}
+    }//myBrowser() end
+
+
+
+
+
+    var browserFilter = ["Chrome","Firefox","Safari","Edge","IE11","IE10"];
+    function checkIfCurrentBrowserInBrowserFilter() {
+        var currentBrowserType = BrowserType();
+        //alert(currentBrowserType);
+        var flag = false;
+        for(var i=0;i<browserFilter.length;i++){
+            if(browserFilter[i]==currentBrowserType){
+                flag = true;
+                break;
+            }
+        }
+        if(!flag){
+            setDownLoadHref();
+            showTs();
+            document.getElementById("closebtn").onclick=function(){
+                hideTs();
+            }
+        }else{
+            hideTs();
+        }
+
+    }
+
+    checkIfCurrentBrowserInBrowserFilter();
+
+    function getSysBit(){
+        var x  = navigator.userAgent.match(/x86_64|Win64|WOW64/) ||navigator.cpuClass === 'x64' ? 'x64' : 'x86';
+        return x;
+    }
+
+    /**
+     * 获取系统类型
+     * @return {'Mac' or 'Win' or 'Linux'}
+     */
+    function getSysType(){
+        var os = navigator.platform.match(/(Win|Mac|Linux)/);//系统
+        var x = os && os[1];
+        return x;
+    }
+    function setDownLoadHref() {
+
+        if(getSysType()=="Mac"){
+            document.getElementById("chrome").href= "https://cloud.tsinghua.edu.cn/d/6275018c12d849bfb040/files/?p=/chrome-mac.dmg&dl=1";
+            document.getElementById("firefox").href = "https://cloud.tsinghua.edu.cn/d/6275018c12d849bfb040/files/?p=/Firefox-mac.dmg&dl=1" ;
+            document.getElementById("ie10Mac").style.display="inline";
+            document.getElementById("ie10").style.display="none";
+        }
+         if(getSysType()=="Win"){
+            if(getSysBit()=="x64"){
+                document.getElementById("chrome").href = "https://cloud.tsinghua.edu.cn/d/6275018c12d849bfb040/files/?p=/chrome64_stable_windows_installer.exe&dl=1";
+                document.getElementById("firefox").href = "https://cloud.tsinghua.edu.cn/d/6275018c12d849bfb040/files/?p=/Firefox-full-latest.exe&dl=1";
+                document.getElementById("ie10").href = "https://cloud.tsinghua.edu.cn/d/6275018c12d849bfb040/files/?p=/IE10-Windows7-x64-en-us.exe&dl=1";
+                document.getElementById("ie10Mac").style.display="none";
+            }
+
+            if(getSysBit()=="x86"){
+                document.getElementById("chrome").href = "https://cloud.tsinghua.edu.cn/d/6275018c12d849bfb040/files/?p=/Google_Chrome_%2832bit%29_v55.0.2883.87.exe&dl=1";
+                document.getElementById("firefox").href = "https://cloud.tsinghua.edu.cn/d/6275018c12d849bfb040/files/?p=/Firefox-full-latest.exe&dl=1";
+                document.getElementById("ie10").href = "https://cloud.tsinghua.edu.cn/d/6275018c12d849bfb040/files/?p=/IE10-Windows7-x86-en-us.exe&dl=1";
+                document.getElementById("ie10Mac").style.display="none";
+            }
+        }
+    }
+
+$(function () {
+    $("#downloadBrowser").click(function () {
+        scrollTo(0,0);
+        $("#jgMessage").css("display","none");
+        setDownLoadHref();
+        showTs();
+        document.getElementById("closebtn").onclick=function(){
+            hideTs();
+        }
+    });
+});
+
+
+</script>
+
+
+
+<script type="text/javascript">
+var ptshttps = "false";
+var ptshttpsurl = "";
+$(function(){
+	 baseUrl = '';
+
+	 /*获取学堂公告 */
+	$.get("/b/wlxt/gg/gg_xxb/querynotetop3",function(dataList){ 
+		renderData(dataList.object);
+	}); 
+	/* 	获取校内公开课 和 全球公开课 */
+	$.get("/b/kc/wlkc_kcb/querycoursetop?num=10",function(dataList){
+        rendercourse(dataList);
+	});
+})
+function formatDateTime(inputTime) {    
+    var date = new Date(inputTime);  
+    var y = date.getFullYear();    
+    var m = date.getMonth() + 1;    
+    m = m < 10 ? ('0' + m) : m;    
+    var d = date.getDate();    
+    d = d < 10 ? ('0' + d) : d;    
+    var h = date.getHours();  
+    h = h < 10 ? ('0' + h) : h;  
+    var minute = date.getMinutes();  
+    var second = date.getSeconds();  
+    minute = minute < 10 ? ('0' + minute) : minute;    
+    second = second < 10 ? ('0' + second) : second;   
+    return y + '-' + m + '-' + d+' '+h+':'+minute+':'+second;    
+}; 
+rendercourse= function (dataList){
+   
+/* if(dataList.result.length==0){
+    var rows ="<p style='text-align:center;'>暂无课程</p>";
+    $("#course2div").html(rows);
+} */
+if(dataList.resultList.length==0){
+    var rows ="<p style='text-align:center;'>暂无课程</p>";
+    $("#course3div").html(rows);
+}
+
+  	$.each(dataList.resultList,function(i,val){
+		if(dataList.resultList==null){
+			var rows ="<p style='text-align:center;'>暂无课程</p>";
+			  $("#course2div").append(rows);
+		}else{
+		var rows ="  <li  onclick='schoolcoursedetail(\""+val.courseid+"\")'>  <a>  <div class='item-global list"+i%5+"'>";
+		  if(val.coursephotourl==null){
+			  rows +=" <div class='img'><img src='/res/app/wlxt/img/course-default2.jpg'></div>";
+		  }else{
+			 rows +=" <div class='img'><img src='/b/wlxt/kc/v_kcxx_jskcxx/teacher/showImageById?wlkcid="+val.courseid+"'></div>";
+		  }
+			rows +=" <div class='box'>";
+			rows +="  <div class='title'><span>"+val.coursename+" </span></div>";
+			rows +=" <div class='professor'>  <p><span>"+val.teachername+"</span><span  class='ml-4'>"+val.teacherzc+"</span></p> <p>"+val.unit+" </p>";
+			rows +="</div></div></div></a></li></div>";
+			$("#rollGlobal ul").append(rows);
+		}
+	});  
+ 
+	/* $.each(dataList.resultList,function(i,val){
+       	if(dataList.resultList !=null){
+			var rows ="<li   onclick='schoolcoursedetail(\""+val.courseid+"\")' class='list"+i%5+"'>  <p class='listtitle'>"+val.coursename+"</p>";
+			rows +="<p class='listcontent'><span>"+val.teachername+"</span><span class='ml-4'>"+val.teacherzc+"</span></p><p class='depart'>"+val.unit+" </p>";
+			rows +="<a onclick='schoolcoursedetail(\""+val.courseid+"\")' class='cjakan ababab'>查看详情<img src='/res/app/wlxt/img/arrow11.png'></a></li>";
+		  $("#course1").append(rows);
+		 }else{
+			var rows ="<p style='text-align:center;'>暂无课程</p>";
+		  $("#course1").append(rows);
+		}
+	}); */
+}
+/* 过滤标签 */
+ filterHTMLTag = function (msg) {
+    var// msg = msg.replace(/<\/?[^>]*>/g, ''); //去除HTML Tag
+    msg = msg.replace(/[|]*\n/, '') //去除行尾空格
+    msg = msg.replace(/&npsp;/ig, ''); //去掉npsp
+    return msg;
+}
+ 
+renderData = function (dataList){
+	$.each(dataList,function(i,val){
+		if(val.detail==null){
+			var detail ='';
+		}else{
+			detail= MyApp.escapeChars(val.bz);
+		}
+		var rows = "<div class='con-hover'> <div class='hover-item'> <div onclick='noticedetail(\""+val.ggid+"\")'  class='item-notice'> <div class='title' title= '"+val.title+"'>"+val.title+"</div>";
+			rows += "<div class='desc'> <span>"+filterHTMLTag(detail)+"</span></div>";
+			rows += "<div class='time'>"+ formatDateTime(val.reg_date).substring(0,10) +"</div><a onclick='noticedetail(\""+val.ggid+"\")' class='cjakan ck_gg'>查看详情<img src='/res/app/wlxt/img/arrow11.png' alt=''></a></div>";
+			rows += "</div></div></div>";
+		$("#notice").append(rows);
+	});
+	$(".math-tex").attr("style","display:none");
+};
+ 
+/* 公告详细页 */
+function  noticedetail(id){
+	  window.location.href = "/f/gg/gg_xxb/beforeView/?id="+id;
+};
+/* 公告列表页 */
+hrefnoticelist = function (){
+	  window.open("/f/wlxt/notice/list");
+};
+/* 全球公开课列表页 */
+hrefglobalist = function (){
+	  window.open("/f/wlxt/common/globaCourse");
+};
+/* 校内公开课列表页 */
+hrefcourse1list = function (){
+	window.open("/f/wlxt/common/schoolCourse");
+};
+/* 校内课程详细页 */
+function schoolcoursedetail(id){
+	window.location.href="/f/wlxt/gkk/v_wlkc_jsjbxxb_wjb/all/SchoolCourseinfo/"+id;
+};
+/* 全球详细页 */
+function globalcoursedetail1(wlkcid){
+	window.location.href="/f/wlxt/gkk/v_wlkc_jsjbxxb_wjb/all/globalCourseinfo/"+wlkcid;
+};
+var wlxtlang_yonghumingweikong = "用户名不能为空";
+ 
+</script>
+<script src="./登录页 -清华大学网络学堂_files/myApp.js.下載"></script>  
+<script type="text/javascript" src="./登录页 -清华大学网络学堂_files/template.js.下載"></script>
+<script type="text/javaScript" src="./登录页 -清华大学网络学堂_files/login.js.下載"></script>
+
+  
+
+ </div></body></html>
